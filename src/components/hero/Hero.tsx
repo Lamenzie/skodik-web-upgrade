@@ -7,7 +7,7 @@ export default function Hero() {
     return (
         <section className="relative h-screen w-full overflow-hidden">
         <AuroraBackground className="h-screen">
-            <div className="flex h-screen flex-col items-center justify-center text-center px-6 pt-24">
+            <div className="relative z-20 flex h-screen flex-col items-center justify-center text-center px-6 pt-24 pointer-events-auto">
             <motion.h1
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}

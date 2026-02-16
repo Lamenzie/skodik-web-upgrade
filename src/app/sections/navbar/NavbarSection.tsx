@@ -34,7 +34,7 @@ export default function NavbarSection() {
             >
                 {/* TODO: vyměň za svoje logo */}
                 <div className="h-8 w-8 rounded bg-white/10" />
-                <span className="text-sm font-medium text-white">Škodík Nábytek</span>
+                <span className="text-sm font-medium text-white">Škodík</span>
             </a>
 
             <NavItems items={navItems} />

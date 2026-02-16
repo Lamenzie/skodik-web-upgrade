@@ -1,24 +1,24 @@
 export const technologies = [
     {
-        title: "CNC přesnost",
+        title: "Spacetower",
         description:
-        "Precizní výroba s perfektní opakovatelností. Vhodné pro čisté hrany a přesné díly.",
-        image: "/gallery/cnc-prenos.png",
-        videoUrl: "https://www.youtube.com/watch?v=ajXYZjcG_QU",
+        "Moderní nábytek už není jen o tom, jak vypadá zvenčí. Skutečná inovace se skrývá uvnitř. Pokud hledáte řešení, které kombinuje maximální úložný prostor s čistou elegancí, odpovědí je potravinová skříň Blum SPACE TOWER osazená prémiovým zásuvkovým systémem LEGRABOX",
+        image: "/gallery/spaceTower.png",
+        videoUrl: "https://www.youtube.com/watch?v=9AgklmqSmRg",
     },
     {
-        title: "3D návrh",
+        title: "Výklopy",
         description:
-        "Vizualizace prostoru před výrobou. Uvidíte rozměry, materiály i celkový dojem.",
-        image: "/gallery/3D-modelovani.png",
-        videoUrl: "https://www.youtube.com/watch?v=d_P598H5o4s",
+        "Znáte ten pocit, když otevřete horní kuchyňskou skříňku a musíte ustoupit dozadu, abyste nedostali dvířky do hlavy? S moderními výklopnými systémy (např. Blum AVENTOS) tento problém mizí. Výklopy neotvírají skříňku do prostoru, ale zvedají čelo elegantně směrem vzhůru – mimo vaši pracovní zónu.",
+        image: "/gallery/vyklopy.png",
+        videoUrl: "https://www.youtube.com/watch?v=xSP9Ojz-XJw",
     },
     {
-        title: "Povrchové úpravy",
+        title: "Rohové skříňky",
         description:
-        "Kvalitní laky a oleje pro dlouhou životnost. Výběr odstínu i struktury materiálu.",
-        image: "/gallery/tech-finish.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=_wESZVDHApY",
+        "Přestaňte se v kuchyni plazit po kolenou. S našimi rohovými výsuvy přijedou hrnce za vámi. Rohové skříňky doposud nebyly elegantnější a efektivnější!",
+        image: "/gallery/rohove-skrinky.png",
+        videoUrl: "https://www.youtube.com/watch?v=i4IlYRs09hg",
     },
 ];
 
