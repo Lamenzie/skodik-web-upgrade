@@ -74,9 +74,8 @@ export default function GallerySection() {
                 </div>
             ))}
             </div>
-
-            {/* PŘED / PO – TEXT VPRAVO */}
-            <div className="mt-16">
+{/* 
+        <div className="mt-16">
             <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
                 <div />
 
@@ -91,25 +90,25 @@ export default function GallerySection() {
 
             <div className="mt-6">
                 <div className="mx-auto max-w-6xl">
-                <div className="rounded-2xl overflow-hidden border border-white/10">
-                    <Compare
-                    firstImage="/compare/kuchyne2.4-compare.jpg"
-                    secondImage="/compare/kuchyne2.4.jpg"
-                    firstImageClassName="object-cover"
-                    secondImageClassName="object-cover"
-                    className="h-[520px] md:h-[620px] w-full"
-                    slideMode="hover"
-                    />
-                </div>
+                    <div className="rounded-2xl overflow-hidden border border-white/10">
+                        <Compare
+                        firstImage="/compare/kuchyne2.4-compare.jpg"
+                        secondImage="/compare/kuchyne2.4.jpg"
+                        firstImageClassName="object-cover"
+                        secondImageClassName="object-cover"
+                        className="h-[520px] md:h-[620px] w-full"
+                        slideMode="hover"
+                        />
+                    </div>
 
-                <div className="mt-3 flex justify-between px-1 text-xs text-foreground/60">
-                    <span>Před</span>
-                    <span>Po</span>
-                </div>
+                    <div className="mt-3 flex justify-between px-1 text-xs text-foreground/60">
+                        <span>Před</span>
+                        <span>Po</span>
+                    </div>
                 </div>
             </div>
-            </div>
-
+        </div>
+*/}
 
         </div>
         </section>
