@@ -18,9 +18,9 @@ export default function TechnologiesSection() {
 
   return (
     <section id="technologie" className="pt-24 pb-12">
-      <div className="mx-auto max-w-6xl px-6 mb-10 text-center">
+      <div className="mx-auto max-w-6xl px-6 mb-10 text-center md:text-left">
         <h2 className="text-3xl md:text-4xl font-semibold">Technologie</h2>
-        <p className="mt-3 text-foreground/70 max-w-2xl md:ml-auto">
+        <p className="mt-3 text-foreground/70 max-w-2xl ">
           Používáme moderní postupy a technologie pro maximální přesnost a čistý
           detail. Klikněte na technologii pro více informací a video.
         </p>

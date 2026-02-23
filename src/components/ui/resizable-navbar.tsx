@@ -200,17 +200,32 @@ export const MobileNavMenu = ({
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className={cn(
-            "absolute inset-0 hidden flex-1 flex-row items-center justify-center gap-1 text-[13px] font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex",
-            className,
-          )}
-        >
-          {children}
-        </motion.div>
+        <>
+          {/* backdrop - klik mimo zavře */}
+          <motion.button
+            type="button"
+            aria-label="Zavřít menu"
+            onClick={onClose}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[998] bg-black/40"
+          />
+
+          {/* samotné menu */}
+          <motion.div
+            initial={{ opacity: 0, y: -6, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -6, scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 260, damping: 24 }}
+            className={cn(
+              "fixed left-4 right-4 top-20 z-[999] flex w-auto flex-col items-start justify-start gap-3 rounded-2xl bg-white px-4 py-5 shadow-[0_0_24px_rgba(34,_42,_53,_0.16)] dark:bg-neutral-950",
+              className,
+            )}
+          >
+            {children}
+          </motion.div>
+        </>
       )}
     </AnimatePresence>
   );

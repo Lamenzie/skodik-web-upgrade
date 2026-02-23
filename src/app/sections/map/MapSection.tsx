@@ -7,7 +7,7 @@ export default function MapSection() {
             <div className="grid gap-6 lg:grid-cols-2">
             <div /> {/* levý prázdný sloupec */}
 
-            <div className="text-right">
+            <div className="text-center md:text-right">
                 <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
                 Kde nás najdete
                 </h2>
@@ -20,7 +20,7 @@ export default function MapSection() {
 
             {/* MAPA – STŘED, MAX WIDTH */}
             <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div className="aspect-[16/10]">
+            <div className="aspect-16/10">
                 <iframe
                 title="Mapa – Škodík Nábytek"
                 className="h-full w-full"

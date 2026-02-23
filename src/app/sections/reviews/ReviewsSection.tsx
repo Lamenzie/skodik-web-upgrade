@@ -12,7 +12,7 @@ export default function ReviewsSection() {
 
     return (
         <section id="recenze" className="py-24">
-        <div className="mx-auto max-w-6xl px-6 mb-10">
+        <div className="mx-auto max-w-6xl px-6 mb-10 text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-semibold">Recenze</h2>
             <p className="mt-3 text-foreground/70 max-w-2xl">
                 Zkušenosti zákazníků, kteří už mají nábytek na míru.
