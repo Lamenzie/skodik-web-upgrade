@@ -73,7 +73,7 @@ export default function AboutSection() {
           <div className="grid gap-4">
             <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10">
               <Image
-                src="/gallery/kuchyne5.2.jpg"
+                src="/gallery/stroje1.jpg"
                 alt=""
                 fill
                 className="object-cover"
