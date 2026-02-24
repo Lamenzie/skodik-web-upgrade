@@ -7,59 +7,59 @@ import { GalleryCarousel } from "@/components/gallery/GalleryCarousel";
 type Tab = "kuchyne" | "skrine" | "jine";
 
 const tabs: { key: Tab; label: string }[] = [
-    { key: "kuchyne", label: "Kuchyně" },
-    { key: "skrine", label: "Skříně" },
-    { key: "jine", label: "Jiné" },
-    ];
+  { key: "kuchyne", label: "Kuchyně" },
+  { key: "skrine", label: "Skříně" },
+  { key: "jine", label: "Jiné" },
+];
 
 export default function GallerySection() {
-    const [active, setActive] = useState<Tab>("kuchyne");
-    const items = useMemo(() => gallery[active], [active]);
+  const [active, setActive] = useState<Tab>("kuchyne");
+  const items = useMemo(() => gallery[active], [active]);
 
-    return (
-        <section id="realizace" className="py-24">
-        <div className="mx-auto max-w-6xl px-6">
-            {/* HEADER – mobil střed, md+ vpravo */}
-            <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
-            <div className="hidden lg:block" />
+  return (
+    <section id="realizace" className="py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
+          <div className="hidden lg:block" />
 
-            <div className="text-center md:text-right">
-                <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
-                Realizace
-                </h2>
-                <p className="mt-3 text-foreground/70 max-w-2xl md:ml-auto">
-                Ukázky vybraných realizací. Každý detail je navržený na míru prostoru.
-                </p>
+          <div className="text-center md:text-right">
+            <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
+              Realizace
+            </h2>
+            <p className="mt-3 text-foreground/70 max-w-2xl md:ml-auto">
+              Ukázky vybraných realizací. Každý detail je navržený přesně na
+              míru prostoru a vašim potřebám. Ať už jde o vysněnou kuchyň,
+              chytře řešenou vestavnou skříň nebo atypické dřevěné prvky,
+              inspirujte se tím, co umíme vytvořit.
+            </p>
 
-                {/* Tabs – mobil střed, md+ vpravo */}
-                <div className="mt-6 flex flex-wrap gap-2 justify-center md:justify-end">
-                {tabs.map((t) => {
-                    const isActive = active === t.key;
-                    return (
-                    <button
-                        key={t.key}
-                        onClick={() => setActive(t.key)}
-                        className={[
-                        "rounded-full px-4 py-2 text-sm transition border",
-                        isActive
-                            ? "border-white/30 bg-white/10"
-                            : "border-white/10 hover:bg-white/5",
-                        ].join(" ")}
-                    >
-                        {t.label}
-                    </button>
-                    );
-                })}
-                </div>
+            <div className="mt-6 flex flex-wrap gap-2 justify-center md:justify-end">
+              {tabs.map((t) => {
+                const isActive = active === t.key;
+                return (
+                  <button
+                    key={t.key}
+                    onClick={() => setActive(t.key)}
+                    className={[
+                      "rounded-full px-4 py-2 text-sm transition border",
+                      isActive
+                        ? "border-white/30 bg-white/10"
+                        : "border-white/10 hover:bg-white/5",
+                    ].join(" ")}
+                  >
+                    {t.label}
+                  </button>
+                );
+              })}
             </div>
-            </div>
+          </div>
+        </div>
 
-            {/* CAROUSEL místo gridu */}
-            <div className="mt-10">
-            <GalleryCarousel items={items} />
-            </div>
+        <div className="mt-10">
+          <GalleryCarousel items={items} />
+        </div>
 
-    {/* 
+        {/* 
             <div className="mt-16">
                 <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
                     <div />
@@ -94,7 +94,7 @@ export default function GallerySection() {
                 </div>
             </div>
     */}
-        </div>
-        </section>
-    );
+      </div>
+    </section>
+  );
 }

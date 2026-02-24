@@ -31,7 +31,10 @@ export default function NavbarSection() {
       <Navbar className="top-0">
         {/* DESKTOP */}
         <NavBody className="px-6">
-          <a href="#" className="relative z-20 flex items-center gap-2 px-2 py-1">
+          <a
+            href="#"
+            className="relative z-20 flex items-center gap-2 px-2 py-1"
+          >
             <div className="h-8 w-8 rounded bg-white/10" />
             <span className="text-sm font-medium text-white">Škodík</span>
           </a>
@@ -40,7 +43,11 @@ export default function NavbarSection() {
           <NavItems items={navItems} onItemClick={close} />
 
           <div className="relative z-20 flex items-center gap-2">
-            <NavbarButton href="#kontakt" variant="secondary" className="text-white">
+            <NavbarButton
+              href="#kontakt"
+              variant="secondary"
+              className="text-white"
+            >
               Kontakt →
             </NavbarButton>
           </div>
@@ -52,27 +59,28 @@ export default function NavbarSection() {
           <MobileNavHeader>
             <a href="#" className="flex items-center gap-2 px-2 py-1">
               <div className="h-8 w-8 rounded bg-white/10" />
-              <span className="text-sm font-medium text-white">Škodík Nábytek</span>
+              <span className="text-sm font-medium text-white">
+                Škodík Nábytek
+              </span>
             </a>
 
             <div className="relative z-[60]" aria-label="Otevřít menu">
-  <MobileNavToggle
-    isOpen={isOpen}
-    onClick={() => setIsOpen((v) => !v)}
-  />
-</div>
+              <MobileNavToggle
+                isOpen={isOpen}
+                onClick={() => setIsOpen((v) => !v)}
+              />
+            </div>
           </MobileNavHeader>
 
-          <MobileNavMenu
-            isOpen={isOpen}
-            onClose={close}
-            className="z-[70]"
-          >
+          <MobileNavMenu isOpen={isOpen} onClose={close}>
             {navItems.map((item) => (
               <a
                 key={item.link}
                 href={item.link}
-                onClick={close}
+                onClick={() => {
+                  // zavři menu, ale nech prohlížeč udělat normální skok na #id
+                  close();
+                }}
                 className="w-full rounded-lg px-3 py-2 text-sm text-neutral-800 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-900"
               >
                 {item.name}

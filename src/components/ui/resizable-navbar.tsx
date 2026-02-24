@@ -7,9 +7,8 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-
+import { createPortal } from "react-dom";
 import React, { useRef, useState } from "react";
-
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -197,14 +196,20 @@ export const MobileNavMenu = ({
   isOpen,
   onClose,
 }: MobileNavMenuProps) => {
-  return (
+  const [mounted, setMounted] = useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* backdrop - klik mimo zavře */}
-          <motion.button
-            type="button"
-            aria-label="Zavřít menu"
+          {/* Backdrop – klik mimo zavře */}
+          <motion.div
             onClick={onClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -212,14 +217,15 @@ export const MobileNavMenu = ({
             className="fixed inset-0 z-[998] bg-black/40"
           />
 
-          {/* samotné menu */}
+          {/* Menu – klik uvnitř nezavírá */}
           <motion.div
+            onClick={(e) => e.stopPropagation()}
             initial={{ opacity: 0, y: -6, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -6, scale: 0.98 }}
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
             className={cn(
-              "fixed left-4 right-4 top-20 z-[999] flex w-auto flex-col items-start justify-start gap-3 rounded-2xl bg-white px-4 py-5 shadow-[0_0_24px_rgba(34,_42,_53,_0.16)] dark:bg-neutral-950",
+              "fixed inset-x-0 top-20 z-[999] mx-auto flex w-[calc(100vw-2rem)] max-w-[520px] flex-col items-start justify-start gap-4 rounded-2xl bg-white px-4 py-6 shadow-[0_0_24px_rgba(34,_42,_53,_0.16)] dark:bg-neutral-950",
               className,
             )}
           >
@@ -227,7 +233,8 @@ export const MobileNavMenu = ({
           </motion.div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 };
 

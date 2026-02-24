@@ -22,7 +22,9 @@ export default function TechnologiesSection() {
         <h2 className="text-3xl md:text-4xl font-semibold">Technologie</h2>
         <p className="mt-3 text-foreground/70 max-w-2xl ">
           Používáme moderní postupy a technologie pro maximální přesnost a čistý
-          detail. Klikněte na technologii pro více informací a video.
+          detail. Věříme totiž, že špičkové vybavení je klíčem k prémiovému
+          vzhledu a dlouhé životnosti vašeho nábytku. Klikněte na technologii
+          pro více informací a video z naší dílny.
         </p>
       </div>
 
