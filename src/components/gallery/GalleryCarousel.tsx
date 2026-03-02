@@ -94,17 +94,17 @@ export function GalleryCarousel({ items }: { items: GalleryItem[] }) {
             </div>
           </ModalTrigger>
 
-          <ModalBody className="p-0">
+          <ModalBody className="max-w-[95vw] overflow-hidden rounded-2xl border border-white/10 bg-black p-0 md:max-w-[90vw] lg:max-w-7xl">
             <ModalContent className="p-0">
-              <div className="relative w-full bg-black">
-                <div className="relative aspect-video w-full">
+              <div className="relative w-full">
+                <div className="relative flex h-[60vh] w-full items-center justify-center md:h-[85vh]">
                   <Image
                     src={current.src}
                     alt={current.alt}
                     fill
                     className="object-contain"
                     sizes="100vw"
-                    priority={false}
+                    priority={true}
                   />
                 </div>
 
@@ -115,7 +115,7 @@ export function GalleryCarousel({ items }: { items: GalleryItem[] }) {
                     e.stopPropagation();
                     prev();
                   }}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-black/40 px-3 py-2 text-white/90 hover:bg-black/60 transition"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-black/40 px-3 py-2 text-white/90 transition hover:bg-black/60 md:left-6 md:px-4 md:py-3"
                   aria-label="Předchozí"
                 >
                   ←
@@ -128,13 +128,13 @@ export function GalleryCarousel({ items }: { items: GalleryItem[] }) {
                     e.stopPropagation();
                     next();
                   }}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-black/40 px-3 py-2 text-white/90 hover:bg-black/60 transition"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-black/40 px-3 py-2 text-white/90 transition hover:bg-black/60 md:right-6 md:px-4 md:py-3"
                   aria-label="Další"
                 >
                   →
                 </button>
 
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-white/15 bg-black/40 px-3 py-1 text-xs text-white/80">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full border border-white/15 bg-black/60 px-4 py-1.5 text-xs text-white/90 backdrop-blur-sm">
                   {index + 1} / {total}
                 </div>
               </div>

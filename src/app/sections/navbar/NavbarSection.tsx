@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   Navbar,
   NavBody,
@@ -27,19 +28,20 @@ export default function NavbarSection() {
 
   return (
     <div className="fixed inset-x-0 top-0 z-[100]">
-      {/* důležité: top-0, ať se netluče s top-20 uvnitř */}
       <Navbar className="top-0">
         {/* DESKTOP */}
         <NavBody className="px-6">
-          <a
-            href="#"
-            className="relative z-20 flex items-center gap-2 px-2 py-1"
-          >
-            <div className="h-8 w-8 rounded bg-white/10" />
+          <a href="#" className="relative z-20 flex items-center gap-2 px-2 py-1">
+            <Image 
+              src="/icons/logo_icon-web_192x192.png" 
+              alt="Škodík Nábytek Logo" 
+              width={32} 
+              height={32} 
+              className="rounded-md"
+            />
             <span className="text-sm font-medium text-white">Škodík</span>
           </a>
 
-          {/* když kliknu na položku, zavřít (konzistence) */}
           <NavItems items={navItems} onItemClick={close} />
 
           <div className="relative z-20 flex items-center gap-2">
@@ -54,13 +56,18 @@ export default function NavbarSection() {
         </NavBody>
 
         {/* MOBILE */}
-        {/* důležité: relative, aby MobileNavMenu (absolute) seděl správně */}
         <MobileNav className="relative px-4">
           <MobileNavHeader>
             <a href="#" className="flex items-center gap-2 px-2 py-1">
-              <div className="h-8 w-8 rounded bg-white/10" />
+              <Image 
+                src="/icons/logo_icon-web_192x192.png" 
+                alt="Škodík Nábytek Logo" 
+                width={32} 
+                height={32} 
+                className="rounded-md"
+              />
               <span className="text-sm font-medium text-white">
-                Škodík Nábytek
+                Škodík
               </span>
             </a>
 
@@ -78,7 +85,6 @@ export default function NavbarSection() {
                 key={item.link}
                 href={item.link}
                 onClick={() => {
-                  // zavři menu, ale nech prohlížeč udělat normální skok na #id
                   close();
                 }}
                 className="w-full rounded-lg px-3 py-2 text-sm text-neutral-800 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-900"

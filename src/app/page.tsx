@@ -1,4 +1,4 @@
-import Hero from "@/components/hero/Hero";
+import Hero from "@/app/sections/hero/Hero";
 import TechnologiesSection from "./sections/technologies/TechnologiesSection";
 import ReviewsSection from "./sections/reviews/ReviewsSection";
 import GallerySection from "./sections/gallery/GallerySection";
