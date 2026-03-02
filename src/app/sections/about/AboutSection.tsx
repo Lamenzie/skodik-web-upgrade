@@ -21,7 +21,6 @@ export default function AboutSection() {
   return (
     <section id="co-delame" className="pt-24 pb-12">
       <div className="mx-auto max-w-6xl px-6 space-y-16">
-        {/* BLOK 1: text vlevo, fotky vpravo */}
         <motion.div
           ref={refTop}
           initial={{ opacity: 0, y: 24 }}
@@ -29,7 +28,6 @@ export default function AboutSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="grid gap-10 lg:grid-cols-2 lg:items-center"
         >
-          {/* Text */}
           <div className="text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-semibold">
               Nábytek na míru. Precizně. Čistě. Moderně.
@@ -69,7 +67,6 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Fotky */}
           <div className="grid gap-4">
             <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10">
               <Image
@@ -102,7 +99,6 @@ export default function AboutSection() {
           </div>
         </motion.div>
 
-        {/* BLOK 2 */}
         <motion.div
           ref={refBottom}
           initial={{ opacity: 0, y: 24 }}
@@ -110,7 +106,6 @@ export default function AboutSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="grid gap-10 lg:grid-cols-2 lg:items-center"
         >
-          {/* Foto firmy zvenku */}
           <div className="relative aspect-16/10 overflow-hidden rounded-2xl border border-white/10">
             <Image
               src="/gallery/dilna1.jpg"
@@ -121,7 +116,6 @@ export default function AboutSection() {
             />
           </div>
 
-          {/* Text kde nás najdete */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <h3 className="text-2xl md:text-3xl font-semibold">
               Kde nás najdete

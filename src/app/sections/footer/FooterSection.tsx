@@ -1,6 +1,7 @@
 import QuickContactModal from "@/components/contact/QuickContactModal";
 
 const links = [
+  { href: "#co-delame", label: "O nás" },
   { href: "#technologie", label: "Technologie" },
   { href: "#realizace", label: "Realizace" },
   { href: "#recenze", label: "Recenze" },
