@@ -2,9 +2,8 @@ export default function MapSection() {
   return (
     <section id="kde-nas-najdete" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
-        {/* NADPIS + TEXT – DOPRAVA */}
         <div className="grid gap-6 lg:grid-cols-2">
-          <div /> {/* levý prázdný sloupec */}
+          <div /> 
           <div className="text-center md:text-right">
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
               Kde nás najdete

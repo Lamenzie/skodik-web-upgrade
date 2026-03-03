@@ -17,7 +17,7 @@ export default function CookiesBanner() {
 
     return (
         <div className="fixed bottom-4 left-1/2 z-60 w-[calc(100%-2rem)] max-w-3xl -translate-x-1/2">
-            <StickyBanner className="w-full pointer-events-auto">
+            <StickyBanner className="pointer-events-auto w-full">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <p className="text-sm text-foreground/70">
                         Používáme cookies pro zlepšení funkčnosti webu a anonymní statistiky.
@@ -25,16 +25,19 @@ export default function CookiesBanner() {
 
                     <div className="flex gap-2">
                         <button
-                            className="rounded-full border border-white/15 px-4 py-2 text-xs uppercase tracking-widest text-foreground/70 hover:text-foreground hover:bg-white/5 transition"
-                            onClick={() => setOpen(false)}
+                            className="rounded-full border border-white/15 px-4 py-2 text-xs uppercase tracking-widest text-foreground/70 transition hover:bg-white/5 hover:text-foreground"
+                            onClick={() => {
+                                localStorage.setItem(STORAGE_KEY, "false");
+                                setOpen(false);
+                            }}
                         >
                             Zavřít
                         </button>
                         <button
-                            className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs uppercase tracking-widest text-foreground hover:bg-white/15 transition"
+                            className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs uppercase tracking-widest text-foreground transition hover:bg-white/15"
                             onClick={() => {
-                            localStorage.setItem(STORAGE_KEY, "true");
-                            setOpen(false);
+                                localStorage.setItem(STORAGE_KEY, "true");
+                                setOpen(false);
                             }}
                         >
                             Přijmout
