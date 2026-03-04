@@ -22,7 +22,8 @@ const merriweather = Merriweather({
 export const metadata: Metadata = {
   metadataBase: new URL("https://skodik-nabytek.cz"),
   title: "Škodík Nábytek | Nábytek na míru",
-  description: "Moderní nábytek na míru s důrazem na detail. Váš prostor, naše řemeslo. Najdete nás v Dubňanech.",
+  description:
+    "Moderní nábytek na míru s důrazem na detail. Váš prostor, naše řemeslo. Najdete nás v Dubňanech.",
   openGraph: {
     title: "Škodík Nábytek | Nábytek na míru",
     description: "Moderní nábytek na míru s důrazem na detail.",
@@ -30,18 +31,40 @@ export const metadata: Metadata = {
     siteName: "Škodík Nábytek",
     locale: "cs_CZ",
     type: "website",
-    images: [{ url: "/icons/OpenGraph-web-skodik.png", width: 1200, height: 630 }], 
+    images: [
+      { url: "/icons/OpenGraph-web-skodik.png", width: 1200, height: 630 },
+    ],
   },
   icons: {
     icon: [
       { url: "/icons/logo_icon-web_favicon.ico" },
-      { url: "/icons/logo_icon-web_16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/icons/logo_icon-web_32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/icons/logo_icon-web_192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icons/logo_icon-web_512x512.png", sizes: "512x512", type: "image/png" },
+      {
+        url: "/icons/logo_icon-web_16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/icons/logo_icon-web_32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/icons/logo_icon-web_192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/icons/logo_icon-web_512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
     ],
     apple: [
-      { url: "/icons/logo_icon-web_180x180.png", sizes: "180x180", type: "image/png" },
+      {
+        url: "/icons/logo_icon-web_180x180.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
     ],
   },
 };

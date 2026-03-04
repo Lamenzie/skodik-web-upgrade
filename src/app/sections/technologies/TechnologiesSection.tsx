@@ -18,7 +18,7 @@ export default function TechnologiesSection() {
           Používáme moderní postupy a technologie pro maximální přesnost a čistý
           detail. Věříme totiž, že špičkové vybavení je klíčem k prémiovému
           vzhledu a dlouhé životnosti vašeho nábytku. Klikněte na technologii
-          pro více informací a video z naší dílny.
+          pro více informací.
         </p>
       </div>
 
